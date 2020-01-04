@@ -1,7 +1,8 @@
 const express=require('express')
 var bodyParser=require('body-parser')
 
-var loginuser=require('./routes.js')
+var registeruser=require('./routes/register')
+var loginuser=require('./routes/login')
 
 const app=express();
 
@@ -9,7 +10,9 @@ const app=express();
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
+app.use("/registeruser",registeruser)
 app.use("/loginuser",loginuser)
+
 
 const port=process.env.PORT || 5000
 
