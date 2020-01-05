@@ -1,11 +1,11 @@
 const express=require('express')
 const router=express.Router()
 const {fire,firebase}=require('../config/firebase.js')
-
+const User_db=require('../models/user')
 
 router.post("/", async( req, res) => {
 
-    const {email,password}=req.body;
+    const {email,password,name}=req.body;
  
     try
     {
@@ -14,8 +14,15 @@ router.post("/", async( req, res) => {
       var user= fire.auth().currentUser
       
       await user.sendEmailVerification();
+
+      var new_user=new User_db({
+        email,
+        name
+        })
+
+      await new_user.save()
  
-      console.log(user.emailVerified)
+      //console.log(user.emailVerified)
  
       
       return res.status(200).send("Email link sent to verify email")

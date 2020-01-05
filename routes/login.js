@@ -11,15 +11,15 @@ router.post("/",async( req,res) => {
 {
   //await fire.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
 
-  
-  const user=await fire.auth().signInWithEmailAndPassword(email,password)
+    const user=await fire.auth().signInWithEmailAndPassword(email,password)
 
    
     if(!user.user.emailVerified)
       return res.status(400).send("Email not verified")
 
-      const token=await user.user.getIdToken()
       
+      const token=await user.user.getIdToken()
+    
       return res.json(token)
       
 
