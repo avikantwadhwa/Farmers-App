@@ -13,6 +13,12 @@ module.exports=async function (req,res,next){
    
     const user= await fireadmin.auth().verifyIdToken(token)
     
+    
+    // if(!user.email_verified)
+    //     return res.status(401).json({"msg":"Email not verified"})
+    
+        next();
+    
     }
    catch(err)
    {
