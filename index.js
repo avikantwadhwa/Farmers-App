@@ -1,11 +1,11 @@
 const express=require('express')
 var bodyParser=require('body-parser')
+const connectDB=require('./db/db')
 
 var registeruser=require('./routes/register')
 var loginuser=require('./routes/login')
 
 const app=express();
-const connectDB=require('./db/db')
 connectDB();
 
 app.use(bodyParser.json())
