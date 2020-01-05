@@ -5,7 +5,8 @@ var registeruser=require('./routes/register')
 var loginuser=require('./routes/login')
 
 const app=express();
-
+const connectDB=require('./db/db')
+connectDB();
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
