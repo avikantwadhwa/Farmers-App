@@ -1,7 +1,7 @@
 const express=require('express')
 const router=express.Router()
 const {fire,firebase,fireadmin}=require('../config/firebase.js')
-//const auth=require('../middleware/auth.js')
+const auth=require('../middleware/auth.js')
 
 router.post("/",async( req,res) => {
 
@@ -11,7 +11,7 @@ router.post("/",async( req,res) => {
 {
   //await fire.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
 
-  // the user signs in with email and password.
+  
   const user=await fire.auth().signInWithEmailAndPassword(email,password)
 
    
@@ -21,7 +21,7 @@ router.post("/",async( req,res) => {
       const token=await user.user.getIdToken()
       
       return res.json(token)
-        //console.log(user.user.emailVerified)
+      
 
 }
 
@@ -30,8 +30,13 @@ catch(err)
   return res.status(400).send(err.message)
 }
  
-
-
 })
+
+// router.post("/checking",auth,(req,res)=>{
+  
+//   console.log("ok")
+
+// })
+
 
 module.exports=router
