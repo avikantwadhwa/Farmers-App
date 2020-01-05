@@ -1,4 +1,4 @@
-const {fireadmin}=require('../config/firebase')
+const {fireadmin}=require('../config/firebase.js')
 
 module.exports=async function (req,res,next){
 
