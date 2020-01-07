@@ -3,7 +3,7 @@ const router = express.Router()
 const { fire, firebase } = require('../config/firebase.js')
 const User_db = require('../models/user')
 
-router.post("/", async (req, res) => {
+router.post("/", async(req, res) => {
     let { email, password, name } = req.body;
     if (!name)
         return res.status(400).send("Name Required")
