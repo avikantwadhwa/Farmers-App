@@ -4,7 +4,7 @@ const { fire, firebase, fireadmin } = require('../config/firebase.js')
 const auth = require('../middleware/auth.js')
 
 router.post("/", async (req, res) => {
-
+<<<<<<< HEAD
     let { email, password } = req.body;
     try {
         //await fire.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
