@@ -7,7 +7,7 @@ router.post("/", async (req, res) => {
 
     let { email, password, name } = req.body;
     if (!name)
-        return res.status(400).send("Name Required")
+        return res.json("Name Required")
 
     try {
         await fire.auth().createUserWithEmailAndPassword(email, password)
@@ -18,10 +18,10 @@ router.post("/", async (req, res) => {
             name
         })
         await new_user.save()
-        return res.status(200).send("Email link sent to verify email")
+        return res.json("Email link sent to verify email")
     } catch (err) {
         console.log(err)
-        return res.status(400).send(err.message)
+        return res.json(err.message)
     }
 
 })

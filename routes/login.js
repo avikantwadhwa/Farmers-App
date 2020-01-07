@@ -11,11 +11,11 @@ router.post("/", async (req, res) => {
     let user = await fire.auth().signInWithEmailAndPassword(email, password)
    
     if (!user.user.emailVerified)
-      return res.send("Email not verified")
+      return res.json("Email not verified")
 
     const token = await user.user.getIdToken()
     
-    return res.send(token)
+    return res.json(token)
   
   }
   
