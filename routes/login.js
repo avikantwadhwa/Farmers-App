@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
     if (!user.user.emailVerified)
       return res.send("Email not verified")
     const token = await user.user.getIdToken()
-    return res.json(token)
+    return res.send(token)
   }
   catch (err) {
     return res.send(err.message)
