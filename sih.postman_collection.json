@@ -1,0 +1,118 @@
+{
+	"variables": [],
+	"info": {
+		"name": "sih",
+		"_postman_id": "5573a575-3147-94cc-0837-9d64eb2682e3",
+		"description": "sih2020 testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "otpsent_request",
+			"request": {
+				"url": "http://localhost:5000/loginotp",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "phone_number",
+							"value": "9811204579",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "otp",
+							"value": "273743",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "session_id",
+							"value": "5d2b1f84-3304-4030-a4bf-f08c69a9c1a0",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "verify_otp",
+			"request": {
+				"url": "http://localhost:5000/verifyotp",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "otp",
+							"value": "702078",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "session_id",
+							"value": "e2280cba-fee2-413c-b5fd-c17edbff9b0f",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"url": "http://localhost:5000/loginuser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "avikantwadhwa@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "avikant16@",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
