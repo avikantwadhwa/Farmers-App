@@ -6,6 +6,7 @@ var registeruser = require('./routes/register')
 var loginuser = require('./routes/login')
 var loginotp=require('./routes/loginotp')
 var verifyotp=require('./routes/verifyotp')
+var sendsms=require('./routes/sendsms')
 
 const app = express();
 connectDB();
@@ -19,6 +20,7 @@ app.use("/registeruser", registeruser)
 app.use("/loginuser", loginuser)
 app.use("/loginotp",loginotp)
 app.use("/verifyotp",verifyotp)
+app.use("/sendsms",sendsms)
 
 
 const port = process.env.PORT || 5000
