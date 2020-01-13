@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "pm2-runtime start index.js"
+    "start": "node index.js"
   },
   "keywords": [
     "example",
@@ -20,6 +20,7 @@
     "express": "^4.17.1",
     "firebase": "^7.6.1",
     "firebase-admin": "^8.9.0",
+    "form-data": "^3.0.0",
     "mongoose": "^5.8.4",
     "pm2": "^4.2.1",
     "request": "^2.88.0",
