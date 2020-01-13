@@ -113,6 +113,60 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "Sending_Sms",
+			"request": {
+				"url": "http://localhost:5000/sendsms",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "phone_number",
+							"value": "9811204579",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "sms",
+							"value": "Agritech is sending you Bid SMS",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "From",
+							"value": "Famersapp",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "To",
+							"value": "9811204579",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "Msg",
+							"value": "Agritech is sending Bid SMS",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
