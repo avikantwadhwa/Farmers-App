@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
 
     const token = await user.user.getIdToken()
     
-    return res.json(token)
+    return res.json(email)
   
   }
   
