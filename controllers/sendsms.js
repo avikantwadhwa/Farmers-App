@@ -1,3 +1,8 @@
+const request = require('request')
+const FormData = require('form-data');
+const config = require('config')
+const api_key = config.get('api_key')
+
 const sendsms = async (req, res) => {
     let { phone_number, sms } = req.body
     try {

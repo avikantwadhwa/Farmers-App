@@ -1,3 +1,7 @@
+const config = require('config')
+const request = require('request')
+const api_key = config.get('api_key')
+
 const verifyotp = async (req, res) => {
     let { otp, session_id } = req.body;
     try {

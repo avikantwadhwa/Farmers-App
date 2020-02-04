@@ -1,3 +1,8 @@
+const request = require('request')
+const config = require('config')
+const api_key = config.get('api_key')
+const template = config.get('template')
+
 const loginotp = async (req, res) => {
     let { phone_number } = req.body
     try {

@@ -1,3 +1,7 @@
+const request = require('request')
+const config = require('config')
+const nodemailer = require('nodemailer')
+
 const mail = async (req, res) => {
     let { subject, text } = req.body;
     try {
