@@ -11,5 +11,5 @@
   },
   "mongoURI":"mongodb+srv://Avikantwadhwa:sih2020%40@cluster0-vgafz.mongodb.net/test?retryWrites=true&w=majority",
   "api_key":"15755230-3545-11ea-9fa5-0200cd936042",
-   "template":"Your login code for Agritech is"
+  "template":"Your login code for Agritech is"
 }
