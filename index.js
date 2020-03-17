@@ -7,7 +7,8 @@ var loginuser = require('./routes/login')
 var loginotp=require('./routes/loginotp')
 var verifyotp=require('./routes/verifyotp')
 var sendsms=require('./routes/sendsms')
-var mail=require('./routes/mail')
+var mail = require('./routes/mail')
+var fileUpload = require('./routes/fileUpload')
 
 const app = express();
 connectDB();
@@ -22,7 +23,8 @@ app.use("/loginuser", loginuser)
 app.use("/loginotp",loginotp)
 app.use("/verifyotp",verifyotp)
 app.use("/sendsms",sendsms)
-app.use("/sendmail",mail)
+app.use("/sendmail", mail)
+app.use("/fileupload", fileUpload)
 
 
 const port = process.env.PORT || 5000
