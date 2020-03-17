@@ -17,9 +17,9 @@ const multipleUpload = multer({ storage: storage }).array('file');
 // const linkhalf = "";
 
 // !!Add configuration keys here
-const BUCKET_NAME = config.bucketName;
-const IAM_USER_KEY = config.accessKeyId;
-const IAM_USER_SECRET = config.secretAccessKey;
+const BUCKET_NAME = 'config.bucketName';
+const IAM_USER_KEY = 'config.accessKeyId';
+const IAM_USER_SECRET = 'config.secretAccessKey';
 
 router.use(cors());
 router.post('/upload', multipleUpload, function (req, res) {
