@@ -1,22 +1,19 @@
 {
-	"variables": [],
 	"info": {
-		"name": "sih",
 		"_postman_id": "5573a575-3147-94cc-0837-9d64eb2682e3",
+		"name": "sih",
 		"description": "sih2020 testing",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "otpsent_request",
+			"name": "OtpsentRequest",
 			"request": {
-				"url": "http://localhost:5000/loginotp",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"description": ""
+						"value": "application/x-www-form-urlencoded"
 					}
 				],
 				"body": {
@@ -25,39 +22,44 @@
 						{
 							"key": "phone_number",
 							"value": "9811204579",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "otp",
 							"value": "273743",
-							"description": "",
 							"type": "text",
 							"disabled": true
 						},
 						{
 							"key": "session_id",
 							"value": "5d2b1f84-3304-4030-a4bf-f08c69a9c1a0",
-							"description": "",
 							"type": "text",
 							"disabled": true
 						}
 					]
 				},
-				"description": ""
+				"url": {
+					"raw": "http://localhost:5000/loginotp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"loginotp"
+					]
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "verify_otp",
+			"name": "VerifyOtp",
 			"request": {
-				"url": "http://localhost:5000/verifyotp",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"description": ""
+						"value": "application/x-www-form-urlencoded"
 					}
 				],
 				"body": {
@@ -66,64 +68,76 @@
 						{
 							"key": "otp",
 							"value": "702078",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "session_id",
-							"value": "e2280cba-fee2-413c-b5fd-c17edbff9b0f",
-							"description": "",
+							"value": "312e9002-0199-4e8e-aaa6-3ecf5ec0077d",
 							"type": "text"
 						}
 					]
 				},
-				"description": ""
+				"url": {
+					"raw": "http://localhost:5000/verifyotp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"verifyotp"
+					]
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "login",
+			"name": "LoginUser",
 			"request": {
-				"url": "http://localhost:5000/loginuser",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"description": ""
+						"value": "application/x-www-form-urlencoded"
 					}
 				],
 				"body": {
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
-							"key": "email",
-							"value": "avikantwadhwa@gmail.com",
-							"description": "",
+							"key": "password",
+							"value": "test@123",
 							"type": "text"
 						},
 						{
-							"key": "password",
-							"value": "avikant16@",
-							"description": "",
+							"key": "email",
+							"value": "avikant16@hotmail.com",
 							"type": "text"
 						}
 					]
 				},
-				"description": ""
+				"url": {
+					"raw": "http://localhost:5000/loginuser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"loginuser"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Sending_Sms",
 			"request": {
-				"url": "http://localhost:5000/sendsms",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"description": ""
+						"value": "application/x-www-form-urlencoded"
 					}
 				],
 				"body": {
@@ -132,41 +146,68 @@
 						{
 							"key": "phone_number",
 							"value": "9811204579",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "sms",
 							"value": "Agritech is sending you Bid SMS",
-							"description": "",
 							"type": "text"
-						},
-						{
-							"key": "From",
-							"value": "Famersapp",
-							"description": "",
-							"type": "text",
-							"disabled": true
-						},
-						{
-							"key": "To",
-							"value": "9811204579",
-							"description": "",
-							"type": "text",
-							"disabled": true
-						},
-						{
-							"key": "Msg",
-							"value": "Agritech is sending Bid SMS",
-							"description": "",
-							"type": "text",
-							"disabled": true
 						}
 					]
 				},
-				"description": ""
+				"url": {
+					"raw": "http://localhost:5000/sendmail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"sendmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "avikant16@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test@123",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Avikant",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/registeruser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"registeruser"
+					]
+				}
 			},
 			"response": []
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
