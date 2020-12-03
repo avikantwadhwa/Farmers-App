@@ -21,7 +21,7 @@
 					"urlencoded": [
 						{
 							"key": "phone_number",
-							"value": "9811204579",
+							"value": "",
 							"type": "text"
 						},
 						{
@@ -111,7 +111,7 @@
 						},
 						{
 							"key": "email",
-							"value": "avikant16@hotmail.com",
+							"value": "",
 							"type": "text"
 						}
 					]
@@ -145,7 +145,7 @@
 					"urlencoded": [
 						{
 							"key": "phone_number",
-							"value": "9811204579",
+							"value": "",
 							"type": "text"
 						},
 						{
@@ -179,12 +179,12 @@
 					"urlencoded": [
 						{
 							"key": "email",
-							"value": "avikant16@hotmail.com",
+							"value": "",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "test@123",
+							"value": "",
 							"type": "text"
 						},
 						{
