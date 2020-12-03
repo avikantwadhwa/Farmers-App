@@ -4,7 +4,7 @@ const User_db = require('../models/user')
 const register = async (req, res) => {
     let { email, password, name } = req.body;
     if (!name)
-        return res.json("Name Required")
+        return res.json("Username Required")
     try {
         await fire.auth().createUserWithEmailAndPassword(email, password)
         var user = fire.auth().currentUser
