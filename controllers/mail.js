@@ -17,7 +17,7 @@ const mail = async (req, res) => {
         });
         const message = {
             from: ' ', // Sender address
-            to: ' ',         // List of recipients
+            to: ' ',        // List of recipients
             subject: subject, // Subject line
             text: text // Plain text body
         }
