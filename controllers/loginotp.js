@@ -15,7 +15,7 @@ const loginotp = async (req, res) => {
         })
     }
     catch (err) {
-        return res.json(err.message)
+       return res.json(err.message)
     }
 }
 exports.loginotp = loginotp
