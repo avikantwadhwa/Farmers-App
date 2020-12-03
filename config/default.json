@@ -1,15 +1,15 @@
 {
   "firebaseConfig":{
-    "apiKey": "AIzaSyDqiBJQszrLly4vTuWj152bc4Ti75lEULg",
-    "authDomain": "farmersauth-32119.firebaseapp.com",
-    "databaseURL": "https://farmersauth-32119.firebaseio.com",
-    "projectId": "farmersauth-32119",
-    "storageBucket": "farmersauth-32119.appspot.com",
-    "messagingSenderId": "182429084792",
-    "appId": "1:182429084792:web:54a0a3a86fad670248918d",
-    "measurementId": "G-1RHXBVY88B"
+    "apiKey": "",
+    "authDomain": "",
+    "databaseURL": "",
+    "projectId": "",
+    "storageBucket": "",
+    "messagingSenderId": "",
+    "appId": "",
+    "measurementId": ""
   },
-  "mongoURI":"mongodb+srv://microbits:farmers123@cluster0.adg19.mongodb.net/users?retryWrites=true&w=majority", 
-  "api_key":"15755230-3545-11ea-9fa5-0200cd936042",
+  "mongoURI":"", 
+  "api_key":"",
   "template":"Your login code for Agritech"
 }
