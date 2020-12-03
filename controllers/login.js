@@ -6,7 +6,7 @@ const login = async (req, res) => {
     try {
         let user = await fire.auth().signInWithEmailAndPassword(email, password)
         if (!user.user.emailVerified)
-            return res.json("Email not verified")
+            return res.json("Email not verified ")
         const token = await user.user.getIdToken()
         return res.json(email)
     }
